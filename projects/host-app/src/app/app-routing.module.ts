@@ -7,6 +7,10 @@ const routes: Routes = [
     path: "",
     component: HomeComponent,
     pathMatch: "full"
+  },
+  {
+    path: 'todo-list',
+    loadChildren: () => import("mfe-app/TodoListModule").then(m => m.TodoListModule)
   }
 ];
 
