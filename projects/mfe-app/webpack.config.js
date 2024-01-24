@@ -3,7 +3,9 @@ const { shareAll, withModuleFederationPlugin } = require('@angular-architects/mo
 module.exports = withModuleFederationPlugin({
 
   name: 'mfe-app',
-
+  remotes: {
+    "host-app": "http://localhost:4300/remoteEntry.js",
+  },
   exposes: {
     './TodoListModule': './projects/mfe-app/src/app/todo-list/todo-list.module.ts',
   },
